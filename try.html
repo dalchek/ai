@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>try catch finally block</title>
+    </head>
+
+    <body>
+        <h1>JavaScript Statements</h1>
+        <h2>The try...catch Statements</h2>
+
+        <p id="catch"></p>
+        <p id="finally"></p>
+
+        <script>
+            let errorMessage;
+            try {
+                adddlert('Welcome guest!');
+            } catch (err) {
+                document.getElementById('catch').innerText = err.message;
+                errorMessage = err.message;
+            } finally {
+                document.getElementById(
+                    'finally'
+                ).innerText = `Thanks for using this feature. Here is problem: "${errorMessage}"`;
+            }
+        </script>
+    </body>
+</html>
